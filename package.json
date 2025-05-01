@@ -1,5 +1,5 @@
 {
-  "name": "nodezip",
+  "name": "zipup",
   "version": "0.0.1",
   "description": "zip command using node",
   "keywords": [
