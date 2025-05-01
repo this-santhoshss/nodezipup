@@ -1,0 +1,24 @@
+src/
+node_modules
+
+.env
+.DS_Store
+
+tsconfig.json
+tsup.config.js
+eslint.config.mjs
+.prettierrc
+.prettierignore
+.eslintrc.*
+.eslintignore
+
+# Ignore dev/test folders if any
+tests/
+test/
+__tests__/
+
+.vscode/
+*.log
+
+coverage/
+dist/*.map  # don't want to publish source maps

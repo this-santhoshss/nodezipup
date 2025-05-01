@@ -1,0 +1,69 @@
+{
+  "name": "nodezip",
+  "version": "0.0.1",
+  "description": "zip command using node",
+  "keywords": [
+    "cli",
+    "command",
+    "zip",
+    "node zip"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "zipup": "./dist/main.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc",
+    "check-exports": "attw --pack .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
+    "ci": "npm run build && npm run check-format && npm run check-exports && npm run typecheck && npm run lint && npm run test"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": "./dist/index.js",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "author": {
+    "name": "Santhosh Sasidharan",
+    "email": "me@cntechy.com",
+    "url": "https://cntechy.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "glob": "^11.0.2",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.4",
+    "@eslint/js": "^9.25.1",
+    "@types/archiver": "^6.0.3",
+    "@types/yargs": "^17.0.33",
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint-plugin-import-x": "^4.11.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "prettier": "^3.5.3",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.1"
+  }
+}
