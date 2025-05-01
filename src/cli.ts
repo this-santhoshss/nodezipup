@@ -18,7 +18,7 @@ async function runCli(): Promise<void> {
   const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
 
   const args = argv
-    .scriptName('zipup')
+    .scriptName('nodezipup')
     .usage('$0 <zipFile> <patterns..> [options]')
     .command('$0 <zipFile> <patterns..>', 'Create a zip file from matched patterns', (yargs) =>
       yargs
@@ -49,7 +49,7 @@ async function runCli(): Promise<void> {
       return true;
     })
     .help()
-    .version(`zipup version ${pkg.version}\n`)
+    .version(`nodezipup version ${pkg.version}\n`)
     .alias('v', 'version')
     .alias('h', 'help')
     .parse() as unknown as Args;

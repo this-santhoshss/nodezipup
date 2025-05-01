@@ -1,5 +1,5 @@
 {
-  "name": "zipup",
+  "name": "nodezipup",
   "version": "0.0.1",
   "description": "zip command using node",
   "keywords": [
@@ -9,11 +9,15 @@
     "node zip"
   ],
   "type": "module",
+  "homepage": "https://github.com/this-santhoshss/nodezipup",
+  "bugs": {
+    "url": "https://github.com/this-santhoshss/nodezipup/issues"
+  },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "bin": {
-    "zipup": "./dist/main.js"
+    "nodezipup": "./dist/main.js"
   },
   "scripts": {
     "build": "tsup",
